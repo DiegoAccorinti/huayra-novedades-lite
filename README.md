@@ -1,2 +1,2 @@
-# primeros-pasos-lite
-Versión liviana de primeros pasos para Huayra CALMA
+# Novedades-lite
+Versión liviana de Huayra-novedades para CALMA
