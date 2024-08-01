@@ -1,0 +1,67 @@
+' Gambas class file
+
+Public aImagenes As String[]
+Public iIndice As Integer
+
+
+
+Public Sub Form_Open()
+
+   ' Cargar la lista de imágenes
+  aImagenes = Split("01.png;02.png;03.png", ";")
+  
+  ' Inicializar el índice
+  iIndice = 0
+  
+  ' Cargar la primera imagen
+  PictureBox1.Picture = Picture.Load(aImagenes[iIndice])
+  
+  ' Iniciar el Timer
+  Timer1.Delay = 4000
+  Timer1.Start
+  
+  
+   ' Verificar si el archivo de autoinicio existe
+  If Exist("~/.config/autostart/pplite.desktop") Then
+    CheckBox1.Value = True
+  Else
+    CheckBox1.Value = False
+  End If
+End
+
+Public Sub CheckBox1_Click()
+
+  ' Añadir o eliminar el archivo de autoinicio
+  If CheckBox1.Value = False Then
+    ' Eliminar el archivo de autoinicio
+    Shell "rm ~/.config/autostart/pplite.desktop" 
+
+  Else 
+    '' como no existe lo creo 
+    
+    Shell "touch ~/.config/autostart/pplite.desktop" '' creo el archivo
+    
+    Shell "echo \"[Desktop Entry]\" >> ~/.config/autostart/pplite.desktop"
+    Shell "echo \"Type=Application\" >> ~/.config/autostart/pplite.desktop"
+    Shell "echo \"Exec=/bin/novedades-lite.gambas\"  >> ~/.config/autostart/pplite.desktop"
+    Shell "echo \"Hidden=false\"  >> ~/.config/autostart/pplite.desktop"
+    Shell "echo \"NoDisplay=false\"  >> ~/.config/autostart/pplite.desktop"
+    Shell "echo \"X-GNOME-Autostart-enabled=true\"  >> ~/.config/autostart/pplite.desktop"
+    Shell "echo \"Name[es]=Novedades\"  >> ~/.config/autostart/pplite.desktop"
+    Shell "echo \"Name=Novedades\"  >> ~/.config/autostart/pplite.desktop"
+    Shell "echo \"Comment[es]=Novedades en Huayra Calma\"  >> ~/.config/autostart/pplite.desktop"
+    Shell "echo \"Comment=Novedades en Huayra Calma\"  >> ~/.config/autostart/pplite.desktop"
+
+  End If
+End
+
+
+
+Public Sub Timer1_Timer()
+  ' Cambiar la imagen
+  iIndice += 1
+  If iIndice >= aImagenes.Count Then
+    iIndice = 0
+  End If
+  PictureBox1.Picture = Picture.Load(aImagenes[iIndice])
+End

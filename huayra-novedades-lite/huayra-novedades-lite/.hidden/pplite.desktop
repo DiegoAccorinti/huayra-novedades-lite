@@ -1,0 +1,10 @@
+Exec=/bin/novedades-lite.gambas
+Type=Application
+[Desktop Entry]
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[es]=Novedades
+Hidden=false
+Comment[es]=Novedades en Huayra Calma
+Comment=Novedades en Huayra Calma
+Name=Novedades

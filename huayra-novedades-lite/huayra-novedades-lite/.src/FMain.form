@@ -1,0 +1,20 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  Move(0,0,566,378)
+  #Scaled = False
+  Text = ("Huayra Calma")
+  Resizable = False
+  { PictureBox1 PictureBox
+    Move(0,0,566,349)
+    Picture = Picture["01.png"]
+  }
+  { CheckBox1 CheckBox
+    Move(7,350,168,28)
+    Text = ("Mostrar al inicio")
+    Value = CheckBox.True
+  }
+  { Timer1 #Timer
+    #Move(21,280)
+  }
+}

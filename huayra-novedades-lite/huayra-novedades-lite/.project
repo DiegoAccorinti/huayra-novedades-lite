@@ -1,0 +1,19 @@
+# Gambas Project File 3.0
+Title=Novedades Lite
+Startup=FMain
+Version=0.0.1
+Component=gb.image
+Component=gb.gtk3
+Component=gb.form
+TabSize=2
+Language=en_US
+Maintainer=Diego Accorinti
+Address=diegoacco@gmail.com
+License=General Public License
+PackageName=huayra-novedades-lite-0.0.1
+Packager=1
+Systems=debian
+Menus=debian:"Applications/Education"
+Categories=debian:"Education;System"
+Groups=debian:"misc"
+ExtraFiles=debian:"pplite.desktop\t~/.config/autostart"
