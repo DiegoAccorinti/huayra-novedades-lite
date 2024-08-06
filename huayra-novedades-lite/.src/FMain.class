@@ -1,0 +1,26 @@
+' Gambas class file
+
+
+Public Sub PictureBox1_MouseDown()
+
+  
+
+End
+
+Public Sub Form_Open()
+
+   ' Cargar la lista de imágenes
+  aImagenes = Split("media/01.png;media/02.png;media/03.png", ";")
+  
+  ' Inicializar el índice
+  iIndice = 0
+  
+  ' Cargar la primera imagen
+  PictureBox1.Picture = Picture.Load(aImagenes[iIndice])
+  
+  ' Iniciar el Timer
+  Timer1.Delay = 4000
+  Timer1.Start
+End
+
+End

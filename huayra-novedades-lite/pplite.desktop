@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=huayra-novedades-lite
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[es]=Primeros Pasos
+Name=PrimerosPasos
+Comment[es]=Mensaje de bienvenida para Huayra Calma
+Comment=Mensaje de bienvenida para Huayra Calma
